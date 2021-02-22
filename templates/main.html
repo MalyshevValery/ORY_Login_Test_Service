@@ -1,0 +1,22 @@
+{% import "material/utils.html" as util %}
+
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/static/styles/main.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+</head>
+<body>
+<div id="content">
+    {%for l in logins%}
+        <!-- TODO: replace later with redirect -->
+        <form action="/login/{{ l[0] }}">
+            <button type="submit" class="item">{{ l[0] }}</button>
+        </form>
+    {%endfor%}
+
+    <b class="item">{{ name }}</b>
+</div>
+</body>
+</html>
